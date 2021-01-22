@@ -35,6 +35,7 @@ class Bloque{
 		int total;
 
 };
+
 class Gen{
 	public:
 		vector<vector<Bloque>> horario;
@@ -51,8 +52,6 @@ class Charlas{
 	int lcharlas;
 	int n;
 };
-
-
 
 class RPAC {
 	public:
@@ -915,8 +914,8 @@ int main(int argc, char** argv){
 			// mejorhop = nextgen[0].hops;
 			// mejorconflicto = nextgen[0].conflictos;
 		}
-
-		// std::cout << n_actual <<";"<<nextgen[0].costo<<";"<<mejor<<";"<<'\n';
+		printf("Generacion: %d Costo total generacion(hop+conflictos): %d Costo de la mejor generacion(hop+conflictos): %d \n", n_actual,nextgen[0].costo,mejor);
+		//std::cout << n_actual <<";"<<nextgen[0].costo<<";"<<mejor<<";"<<'\n';
 
 		while(nextgen.size() != (unsigned)Poblacion){
 			int randp = rand() % size;
